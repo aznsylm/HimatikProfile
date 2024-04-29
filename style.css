@@ -1,0 +1,467 @@
+:root {
+    --primary: #06A3DA;
+    --secondary: #34AD54;
+    --light: #EEF9FF;
+    --dark: #091E3E;
+}
+
+h1,
+h2,
+.fw-bold {
+    font-weight: 800 !important;
+    font-family: "Nunito", sans-serif;
+}
+
+h3,
+h4,
+.fw-semi-bold {
+    font-weight: 700 !important;
+    font-family: "Nunito", sans-serif;
+}
+
+h5,
+h6,
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+/* NAVBAR */
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: "Nunito", sans-serif;
+    color: var(--dark);
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+
+.navbar-dark .navbar-nav .nav-item .dropdown-menu {
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-item .dropdown-menu a {
+    color: #000000;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-item .dropdown-menu a:hover {
+    color: var(--primary);
+}
+
+.navbar-dark .navbar-brand h1 {
+    color: #000000;
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 576px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+        background: #FFFFFF;
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: var(--dark);
+    }
+
+    .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+
+    .navbar-dark .navbar-nav .nav-item .dropdown-menu a:hover {
+        color: var(--primary);
+    }
+}
+
+@media (min-width: 577px) and (max-width:768px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #FFFFFF;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+
+    .navbar-dark .navbar-nav .nav-item .dropdown-menu a:hover {
+        color: var(--primary);
+    } 
+}
+
+/* 3 BOX  */
+.facts {
+    position: relative;
+    margin-top: -75px;
+    z-index: 1;
+}
+
+/* VISI MISI  */
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+
+
+/* Visi Misi 2 */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,900');
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.canvas-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-left: 100px;
+
+    .canvas+.canvas {
+        margin-left: 300px;
+    }
+}
+
+.canvas {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.canvas_border {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.rect-gradient {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: erase-line 1s ease-in-out forwards;
+}
+
+.canvas_img-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-10deg) skew(-10deg);
+    overflow: hidden;
+    background: white;
+}
+
+.canvas_img {
+    transform: scale3d(.9, .9, .9);
+    opacity: .3;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.canvas_copy {
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    text-transform: uppercase;
+    color: #dac527;
+    z-index: 100;
+}
+
+.canvas_copy--left {
+    left: -25%;
+}
+
+.canvas_copy_title {
+    font-size: 62px;
+    display: block;
+    transform: translateX(-#{$animation-offset});
+    transition: $transition-cubic-bezier 0s;
+    color: black;
+
+    &:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+}
+
+.canvas_copy_subtitle {
+    display: block;
+    transform: rotate(270deg) translateY(-100%) translateX(calc(-100% - #{$animation-offset}));
+    transform-origin: top left;
+    position: absolute;
+    left: 0;
+    top: px; //This needs to change with font size. It's an offset for the line-height of the "hellow world"
+    font-size: 24px;
+    font-weight: 900;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+}
+
+.canvas_copy_details {
+    display: block;
+    transition: $transition-cubic-bezier 0.14s;
+    transform: translateX(-#{$animation-offset});
+}
+
+.canvas_border, .canvas_img-wrapper, .canvas_img {
+    transition: $transition-ease-in-out;
+}
+
+.canvas_border, .canvas_img-wrapper {
+    transform: rotate(-10deg) skew(-10deg);
+}
+
+.canvas_copy_title, .canvas_copy_subtitle, .canvas_copy_details {
+    opacity: 0;
+}
+
+.canvas:hover {
+    .canvas_copy_title, .canvas_copy_subtitle, .canvas_copy_details, .canvas_img {
+        opacity: 1;
+    }
+
+    .canvas_border, .canvas_img-wrapper {
+        transform: rotate(-14deg) skew(-14deg) scale(0.96);
+    }
+
+    .canvas_img {
+        transform: scale3d(1, 1, 1);
+    }
+
+    .canvas_copy_title, .canvas_copy_details {
+        transform: translateX(0);
+    }
+
+    .canvas_copy_subtitle {
+        transform: rotate(270deg) translateY(-100%) translateX(-100%);
+    }
+
+    .rect-gradient {
+        animation: draw-line 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+}
+
+@keyframes draw-line {
+    from {
+        stroke-dashoffset: 2000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes erase-line {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 2000;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 991.98px) {}
+
+@media (min-width: 992px) {}
+
+/* STRUKUTUR ORGANISASI  */
+.blog-item .blog-img img {
+    transition: .5s;
+}
+
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+/* GALLERY HIMATIK  */
+
+
+.gallery-himatik img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 1000ms;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    max-width: 100%;
+    width: 70rem;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+figure::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(2);
+    transition: opacity 300ms;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 600ms, transform 600ms;
+}
+
+a:is(:hover, :focus) figure::after {
+    opacity: 1;
+}
+
+a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transition: opacity 600ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    figcaption {
+        transform: translate3d(0, 2rem, 0);
+    }
+
+    figure::after {
+        border-radius: 50%;
+        opacity: 1;
+        transform: scale(0);
+        transition: transform 900ms;
+    }
+
+    a:is(:hover, :focus) figure::after {
+        transform: scale(2.5);
+    }
+
+    a:is(:hover, :focus) figcaption {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: opacity 600ms 400ms, transform 600ms 400ms;
+    }
+
+    /* a:is(:hover, :focus) img {
+        transform: scale(1.2);
+    } */
+}
